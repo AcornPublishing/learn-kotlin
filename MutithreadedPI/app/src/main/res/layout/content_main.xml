@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android=
+        "http://schemas.android.com/apk/res/android"
+    xmlns:tools=
+        "http://schemas.android.com/tools"
+    xmlns:app=
+        "http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior=
+        "@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Multithreaded PI"
+        android:textSize="25sp"/>
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Processors"/>
+        <TextView android:id="@+id/procs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Iterations"/>
+        <EditText android:id="@+id/iters"
+            android:text="1000000"
+            android:inputType="number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Threads"/>
+        <EditText android:id="@+id/threads"
+            android:text="4"
+            android:inputType="number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Cumul Iters"/>
+        <TextView android:id="@+id/cumulIters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Current Pi"/>
+        <TextView android:id="@+id/pi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Calc Time"/>
+        <TextView android:id="@+id/calcTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <Button android:text="CALC"
+        android:onClick="calc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button android:text="RESET"
+        android:onClick="reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

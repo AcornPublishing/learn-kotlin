@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android=
+        "http://schemas.android.com/apk/res/android"
+    xmlns:tools=
+        "http://schemas.android.com/tools"
+    xmlns:app=
+        "http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=
+        "com.example.myapplication.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title.numberguess"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/startBtn"
+        android:onClick="start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn.start"/>
+
+    <Space android:layout_width="match_parent"
+        android:layout_height="5dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView android:text="@string/label.guess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/num"
+            android:hint="@string/edit.number"
+            android:layout_width="80sp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            tools:ignore="Autofill"/>
+        <Button
+            android:id="@+id/doGuess"
+            android:onClick="guess"
+            android:text="@string/btn.do.guess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <Space android:layout_width="match_parent"
+        android:layout_height="5dp"/>
+
+    <TextView
+        android:id="@+id/status"
+        android:text="@string/status.start.info"
+        android:textColor="#FF000000"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Space android:layout_width="match_parent"
+        android:layout_height="5dp"/>
+
+    <TextView android:text="@string/label.log"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.example.myapplication.Console
+        android:id="@+id/console"
+        android:layout_height="100sp"
+        android:layout_width="match_parent" />
+
+</LinearLayout>
